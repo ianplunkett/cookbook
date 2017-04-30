@@ -2,6 +2,8 @@ import * as path from 'path';
 import * as express from 'express';
 import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
+import db from './models';
+
 import HeroRouter from './routes/HeroRouter';
 
 // Creates and configures an ExpressJS web server.
@@ -36,6 +38,16 @@ class App {
                 message: 'Hello World!'
             });
         });
+
+        db.User.findOne({
+            where: {
+                name: 'john'
+            }
+        }).then(user => {
+            user.set('name', 'john');
+            user.save();
+        });
+
         this.express.use('/', router);
         this.express.use('/api/v1/heroes', HeroRouter);
     }

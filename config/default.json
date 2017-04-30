@@ -1,0 +1,16 @@
+{
+
+    "development": {
+	"storage": "./storage/db.development.sqlite",
+	"dialect": "sqlite"
+    },
+    "test": {
+	"storage": ":memory:",
+	"dialect": "sqlite"
+    },
+    "production": {
+	"storage": ":memory:",
+	"dialect": "sqlite"
+    }
+
+}
