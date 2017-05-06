@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prestart": "tsc",
+    "postinstall": "sequelize --config config/default.json db:migrate"
     "start": "nodemon --watch dist dist/index.js",
     "test": "mocha --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'",
     "testw": "mocha -w --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'"

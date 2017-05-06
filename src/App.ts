@@ -49,7 +49,7 @@ class App {
         });
 
         this.express.use('/', router);
-        this.express.use('/api/v1/heroes', HeroRouter);
+        //        this.express.use('/api/v1/heroes', HeroRouter);
     }
 }
 
