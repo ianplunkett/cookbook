@@ -8,9 +8,9 @@ Clone this repo and install dependencies:
 
 ```
 git clone git@github.com:ianplunkett/cookbook.git
-cd cookbook && node install
+cd cookbook
+npm install
 npm install -g typescript
-
 ```
 
 
